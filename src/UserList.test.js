@@ -14,7 +14,9 @@ function renderComponent() {
 }
 test("render one row per user", () => {
   renderComponent();
-  //screen.logTestingPlaygroundURL(); // requires only once after showing URL
+  // get URL from below link in the terminal/CMD prompt to see and find elements and
+  // it requires only once after showing URL
+  // screen.logTestingPlaygroundURL();
 
   // first approach using data-testid but not recommended
   const rows = within(screen.getByTestId("users")).getAllByRole("row");

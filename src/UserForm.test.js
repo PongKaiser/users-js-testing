@@ -28,3 +28,21 @@ test("it call onAddUser when the form is submitted", async () => {
   expect(mock).toHaveBeenCalled();
   expect(mock).toHaveBeenCalledWith({ name: "test", email: "test@test.com" });
 });
+
+test("clears input form when the form is submitted", async () => {
+  render(<UserForm onAddUser={() => {}} />);
+  const inputName = screen.getByRole("textbox", { name: /name/i });
+  const inputEmail = screen.getByRole("textbox", { name: /email/i });
+
+  await user.click(inputName);
+  await user.keyboard("xyz");
+
+  await user.click(inputEmail);
+  await user.keyboard("xyz@xyz.com");
+
+  const button = screen.getByRole("button");
+  await user.click(button);
+
+  expect(inputName).toHaveValue("");
+  expect(inputEmail).toHaveValue("");
+});
