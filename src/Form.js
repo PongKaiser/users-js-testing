@@ -1,5 +1,6 @@
 import React from "react";
 
+// npx rtl-book serve query-notes.js to work on browser without react project
 const Form = () => {
   return (
     <div>
