@@ -7,6 +7,7 @@ function App() {
   const onAddUser = (user) => {
     setUsers([...users, user]);
   };
+
   return (
     <>
       <UserForm onAddUser={onAddUser} />
