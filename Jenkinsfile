@@ -32,8 +32,10 @@ pipeline {
 
       stage('Start a service'){
         steps {
-          sh 'npm install serve'
-          sh 'serve -s build'
+          sh """
+            npm install -g serve
+            serve -s build
+          """
         }
       }
     }
