@@ -29,7 +29,7 @@ const UserForm = ({ onAddUser }) => {
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <button>Add User</button>
+      <button>Add User To The List</button>
     </form>
   );
 };
