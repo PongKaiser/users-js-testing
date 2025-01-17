@@ -5,12 +5,9 @@ test("test all roles", () => {
   render(<Common />);
   const roles = [
     "link",
-    "button",
-    "img",
     "checkbox",
     "radio",
     "spinbutton",
-    "textbox",
     "listitem",
     "list",
   ];

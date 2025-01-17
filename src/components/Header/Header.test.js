@@ -7,8 +7,8 @@ describe('<Header />', () => {
   test('it should mount', () => {
     render(<Header />);
 
-    const Header = screen.getByTestId('Header');
+    const headerElement = screen.getByTestId('Header');
 
-    expect(Header).toBeInTheDocument();
+    expect(headerElement).toBeInTheDocument();
   });
 });

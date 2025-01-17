@@ -30,7 +30,7 @@ const Common = () => {
           id="email"
           type="text"
           value={email}
-          onchange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <label htmlFor="color">Color</label>
         <input id="color" type="text" placeholder="Red" />
