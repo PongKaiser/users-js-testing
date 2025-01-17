@@ -33,8 +33,9 @@ pipeline {
       stage('Start a service'){
         steps {
           sh """
+            export JENKINS_NODE_COOKIE=dontKillMe;
             npm install -g serve
-            serve -s build
+            pm2 start "serve -s build" --name "todo-backend"
           """
         }
       }
